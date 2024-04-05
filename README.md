@@ -17,6 +17,7 @@ Veeti Tiilikainen: VeetiTiili,
 Miika Ojala: ojalamiika,
 Henrik Göös: HenrikGoos,
 Alex Granat: AlexGranatt,
+Riku Jääskeläinen: Rjaask
 
 Discord-nimimerkit:
 Nico Pasma: kahvikoukku,
@@ -25,4 +26,5 @@ Veeti Tiilikainen: Vede,
 Miika Ojala: Jäine,
 Henrik Göös: Heka,
 Alex Granat: allug03,
+Riku Jääskeläinen: Gooby
 
