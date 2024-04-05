@@ -5,6 +5,7 @@ Veeti Tiilikainen: VeetiT,
 Miika Ojala: ojalamiika,
 Henrik Göös: HenrikGoos,
 Alex Granat: Alexgranat,
+Riku Jääskeläinen: Rjaask
 
 Hacknplan linkki: 
 https://app.hacknplan.com/p/202458/kanban?categoryId=0&boardId=557448
