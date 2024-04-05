@@ -6,6 +6,9 @@ Miika Ojala: ojalamiika,
 Henrik Göös: HenrikGoos
 Alex Granat: Alexgranat,
 
+Hacknplan linkki: 
+https://app.hacknplan.com/p/202458/kanban?categoryId=0&boardId=557448
+
 Hacknplan-nimimerkit:
 Nico Pasma: nicopasma,
 Olli Nuorala: Olliedvard,
