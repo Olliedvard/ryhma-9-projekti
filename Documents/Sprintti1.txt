@@ -1,3 +1,3 @@
 Keskiviikkona 3.4. tehtiin kansiorakenne ja runko sivustolle (yksinkertaiset HTML-tiedostot ja CSS-tiedosto).
 Torstaina 4.4. pidettiin 2h pituinen etäpalaveri, jossa sovimme aiheen ja työnjakoa ja, että teemme projektia eteenpäin 5.4.
-Perjantaina 5.5. teimme klo 8-12 projektia eteenpäin ja kloonasimme repositoriot kolmelle ryhmän jäsenelle.
+Perjantaina 5.4. teimme klo 8-12 projektia eteenpäin ja kloonasimme repositoriot kolmelle ryhmän jäsenelle.
