@@ -1,0 +1,2 @@
+Keskiviikkona 10.4. pidettiin projektipalaveri, jossa puhuttiin osa-alueiden jakamisesta, UI:n toteutuksesta sekä mahdollisesta
+pisteytyssysteemistä.

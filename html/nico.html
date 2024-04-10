@@ -10,18 +10,42 @@
     <body>
         <ul>
             <li><a href="./index.html">Etusivu</a></li>
-            <li><a href="./alex.html">Alex</a></li>
-            <li><a href="./henrik.html">Henrik</a></li>
-            <li><a href="./miika.html">Miika</a></li>
-            <li><a href="./nico.html">Nico</a></li>
-            <li><a href="./olli.html">Olli</a></li>
-            <li><a href="./riku.html">Riku</a></li>
-            <li><a href="./veeti.html">Veeti</a></li>
-            <li><a href="./info.html">Info</a></li>
             <li><a href="./tulokset.html">Tulokset</a></li>
+            <li><a href="./tulokset.html">Tulokset</a></li>
+            <div class="dropdown">
+                <button class="dropbtn">Tasot</button>
+                <div class="dropdown-content">
+                  <a href="./alex.html">Alexin sivu</a>
+                  <a href="./henrik.html">Henrikin sivu</a>
+                  <a href="./miika.html">Miikan sivu</a>
+                  <a href="./nico.html">Nicon sivu</a>
+                  <a href="./olli.html">Ollin sivu</a>
+                  <a href="./riku.html">Rikun sivu</a>
+                  <a href="./veeti.html">Veetin sivu</a>
+                </div>
+              </div>
         </ul>
-        <div id="leipateksti">
-            <p>Tämä on esimerkiksi Nicon sivu, johon tullee jotaki</label></p>
+        <div id="container">
+            <h2>Kysymys <output id="kysymysnro"></output>/10<br><output id="kysymys"></output></h2>
+            <br><br>
+            <h4>Aikaa jäljellä: <output id="aika"></output> sekuntia.</h4>
+            <form>
+                <div id="minusdiv">
+                    <button type="button" id="minusbutton">-</button>
+                </div>
+                <div id="prosentitdiv">
+                    <h2><output id="prosentitmaara"></output>%</h2>
+                </div>
+                <div id="plusdiv">
+                    <button type="button" id="plusbutton">+</button>
+                </div>
+            </form>
+            <div id="vastaadiv">
+                <button type="button" id="vastaa"><h4>Vastaa</h4></button>
+            </div>
+            <div id="pisteetdiv">
+                Pisteet: <output id="pisteet"></output><br>
+            </div>
         </div>
         <script src="../js/nico.js"></script>
     </body>
