@@ -26,27 +26,30 @@
               </div>
         </ul>
         <div id="container">
-            <h2>Kysymys <output id="kysymysnro"></output>/10<br><output id="kysymys"></output></h2>
+            <h2>Kysymys <output id="kysymysnro"></output>/5<br><output id="kysymys"></output></h2>
             <br><br>
             <h4>Aikaa jäljellä: <output id="aika"></output> sekuntia.</h4>
             <form>
                 <div id="minusdiv">
+                    <button type="button" id="minus10button">-10</button>
                     <button type="button" id="minusbutton">-</button>
                 </div>
                 <div id="prosentitdiv">
-                    <h2><output id="prosentitmaara"></output>%</h2>
+                    <h2>  <output id="prosentitmaara"></output>%  </h2>
                 </div>
                 <div id="plusdiv">
                     <button type="button" id="plusbutton">+</button>
+                    <button type="button" id="plus10button">+10</button>
                 </div>
             </form>
             <div id="vastaadiv">
                 <button type="button" id="vastaa"><h4>Vastaa</h4></button>
             </div>
             <div id="pisteetdiv">
-                Pisteet: <output id="pisteet"></output><br>
+                <h4>Pisteet: <output id="pisteet"></output></h4><br>
             </div>
         </div>
+        <script src="../js/niconkysymykset.js" type="module"></script>
         <script src="../js/nico.js"></script>
     </body>
 </html>
