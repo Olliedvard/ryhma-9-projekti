@@ -7,7 +7,38 @@
     <link href="../css/henrik.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Heipä Hei!</h1>
+        <ul>
+            <li><a href="./index.html">Etusivu</a></li>
+            <li><a href="./info.html">Info</a></li>
+            <li><a href="./tulokset.html">Tulokset</a></li>
+            <div class="dropdown">
+                <button class="dropbtn">Tasot</button>
+                <div class="dropdown-content">
+                  <a href="./alex.html">Alexin sivu</a>
+                  <a href="./henrik.html">Henrikin sivu</a>
+                  <a href="./miika.html">Miikan sivu</a>
+                  <a href="./nico.html">Nicon sivu</a>
+                  <a href="./olli.html">Ollin sivu</a>
+                  <a href="./riku.html">Rikun sivu</a>
+                  <a href="./veeti.html">Veetin sivu</a>
+                </div>
+              </div>
+        </ul>
+        <div class="Kysymykset">
+          <h1>Polynomi testi</h1>
+          <div class="Kysymys">
+            <p id="teksti kenttä"> Mikä on x kun x<span class="superscript">2</span></p>
+            <div class="vaihtoehdot">
+              <button class="vaihtoehto" onclick="checkAnswer(0)">x=2</button>
+              <button class="vaihtoehto" onclick="checkAnswer(1)">x=4</button>
+              <button class="vaihtoehto" onclick="checkAnswer(2)">x=7</button>
+            </div>
+            <p id="feedback"></p>
+          </div>
+      
+        </div>
+        <script src="../js/henrik.js"></script>
+      </body>
 </body>
 
 </html>
