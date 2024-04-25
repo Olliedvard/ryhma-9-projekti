@@ -1,7 +1,15 @@
 body {
-    background-color: darkslategray;
+    min-height: 100vh;
+    background: url('/images/sky-8254928_1920.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 p {
     color: white;
     font-size: 2em;
+}
+
+h1 {
+    color: white;
+    background-color: aquamarine;
 }
