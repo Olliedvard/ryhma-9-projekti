@@ -140,3 +140,9 @@ button {
   .choice:hover {
     background-color: #2980b9;
   }
+  body {
+    min-height: 100vh;
+    background: url('/images/sky-8254928_1920.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+}

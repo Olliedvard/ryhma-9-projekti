@@ -50,10 +50,10 @@ const questions = [
   function checkAnswer(selected) {
     const feedback = document.getElementById("feedback");
     if (selected === questions[currentQuestion].correct) {
-      feedback.textContent = "Correct!";
+      feedback.textContent = "Oikein!";
       correctAnswers++;
     } else {
-      feedback.textContent = "Incorrect!";
+      feedback.textContent = "Väärin!";
     }
   
     setTimeout(() => {
@@ -63,7 +63,7 @@ const questions = [
         showQuestion();
       } else {
         const quizContainer = document.querySelector(".quiz-container");
-        quizContainer.innerHTML = `<p>You got ${correctAnswers} out of ${questions.length} questions.</p>`;
+        quizContainer.innerHTML = `<p>Sait ${correctAnswers} / ${questions.length} kysymyksestä oikein.</p>`;
       }
     }, 2000);
   }
