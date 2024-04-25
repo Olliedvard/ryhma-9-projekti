@@ -1,0 +1,9 @@
+Mitä aloitetaan:
+-Omien nettisivujen koodaus
+-UI:n toteutus
+
+Mitä pitää jatkaa:
+-Mahdollisia lisättäviä tekstitiedostoja ja dokumentteja jotka puuttuvat
+
+Mitä pitäisi lopettaa:
+-Lusmuilu
