@@ -42,11 +42,12 @@ body {
 }
 
 .flex-container {
-
-    background-color: aqua;
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
 }
 
-.ohjeetlaatikko {
-    background-color: aquamarine;
-}
+
 
