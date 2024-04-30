@@ -4,29 +4,34 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <meta name="viewport" content="width='device-width', initial-scale=1.0">
-        <link href="../css/nico.css" rel="stylesheet">
+        <link href="../css/nico2.css" rel="stylesheet">
         <title>Prosenttipeli</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
-        <ul>
-            <li><a href="./index.html">Etusivu</a></li>
-            <li><a href="./info.html">Info</a></li>
-            <li><a href="./tulokset.html">Tulokset</a></li>
-            <div class="dropdown">
-                <button class="dropbtn">Tasot</button>
-                <div class="dropdown-content">
-                  <a href="./alex.html">Alexin sivu</a>
-                  <a href="./henrik.html">Henrikin sivu</a>
-                  <a href="./miika.html">Miikan sivu</a>
-                  <a href="./nico.html">Nicon sivu</a>
-                  <a href="./olli.html">Ollin sivu</a>
-                  <a href="./riku.html">Rikun sivu</a>
-                  <a href="./veeti.html">Veetin sivu</a>
-                </div>
-              </div>
-        </ul>
-        <div id="container">
-            <h2>Kysymys <output id="kysymysnro"></output>/5<br><output id="kysymys"></output></h2>
+        <section class="header">
+            <a href="#" class="MatikkaMajakka">MatikkaMajakka</a>
+     
+            <input type="checkbox" id="check">
+             <label for="check" class="icons">
+                 <i class='bx bx-menu' id="hampurilais-menu"></i>
+                 <i class='bx bx-x' id="sulje-nappi"></i>
+             </label>
+     
+             <nav class="navbar">
+                 <a href="#">Etusivu</a>
+                 <a href="#">Tietoa meistä</a>
+                 <a href="#">Pisteet</a>
+                 <a href="#">Pelit</a>
+             </nav>
+     
+     
+         </section>
+        <div id="tekstilaatikko">
+            <br><br><br><br><h2>Kysymys <output id="kysymysnro"></output>/5<br><output id="kysymys"></output></h2>
             <br><br>
             <h4>Aikaa jäljellä: <output id="aika"></output> sekuntia.</h4>
             <form>
@@ -49,6 +54,9 @@
                 <h4>Pisteet: <output id="pisteet"></output></h4><br>
             </div>
         </div>
+        <section class="footer">
+        
+        </section>
         <script src="../js/niconkysymykset.js" type="module"></script>
         <script src="../js/nico.js"></script>
     </body>
