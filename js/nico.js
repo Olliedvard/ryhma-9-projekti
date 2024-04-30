@@ -21,10 +21,14 @@ var kysymykset = ["Kuinka monta prosenttia 4 on 20:stä?",
 "Montako prosenttia 84 on 200:sta?",
 "Montako prosenttia on neljä viidesosaa?",
 "Kuinka monta prosenttia 30 tuntia on yhdestä vuorokaudesta?",
-"Jos vaaleissa annettiin yhteensä 500 ääntä, ja ehdokas A sai 200 ääntä, mikä oli ehdokas A:n saamien äänien prosenttiosuus kokonaisäänistä?"
+"Jos vaaleissa annettiin yhteensä 500 ääntä, ja ehdokas A sai 200 ääntä, mikä oli ehdokas A:n saamien äänien prosenttiosuus kokonaisäänistä?",
+"Jos tuotteen hintaa nostetaan 30€:sta 60€:n, kuinka monta prosenttia hintaa nostetaan?",
+"Paljonko luku 0,3 on prosentteina?",
+"Montako prosenttia 1,72 on 1,0:sta?",
+"Jos tuotteen hintaa nostetaan 3€:sta 9€:n, kuinka monta prosenttia hintaa nostetaan?"
 ]
 
-var vastaukset = ["20", "75", "160", "33", "42", "80", "125", "40"] //Vastaukset on annettu siinä järjestyksessä, missä niitä vastaavat kysymyksetkin.
+var vastaukset = ["20", "75", "160", "33", "42", "80", "125", "40", "100", "30", "172", "200"] //Vastaukset on annettu siinä järjestyksessä, missä niitä vastaavat kysymyksetkin.
 
 const minusPohjassa = () => {
     // Tämä tapahtuu, jos miinusnappia painetaan pohjassa ja prosentteja on enemmän kuin 0.
@@ -78,6 +82,14 @@ const uusiKysymys = () => {
 const peliOhi = () => {
     alert("Peli on päättynyt. Lopullinen pistemääräsi on "+[pisteet]+". Päivitä sivu pelataksesi uudestaan.")
     vastausnappi.remove()
+    aika = 0
+    clearInterval(ajastinON);
+    if (pisteet > parhaatpisteet) {
+        parhaatpisteet = pisteet
+        sessionStorage.setItem("parhaatprosenttipisteet", parhaatpisteet.toString())
+        document.querySelector('#parhaatpisteet').innerHTML = parhaatpisteet
+        alert("Teit juuri uuden ennätyksesi! Uusi paras pistemääräsi on "+parhaatpisteet)
+    }
 }
 
 vastausnappi.addEventListener('click', () => { //Mitä tapahtuu, kun käyttäjä painaa "vastaa" -nappia.
@@ -111,7 +123,6 @@ function kysymysAjastin() {
     document.querySelector('#aika').innerHTML = aika;
 
     if (aika === 0) {
-        clearInterval(ajastinON);
         alert('Aika loppui.');
         uusiKysymys()
     }
@@ -123,6 +134,13 @@ addEventListener("DOMContentLoaded", () => {
     document.querySelector('#pisteet').innerHTML = pisteet
     document.querySelector('#kysymysnro').innerHTML = kysymysnro
     document.querySelector('#aika').innerHTML = aika
+    parhaatpisteet = Number(sessionStorage.getItem("parhaatprosenttipisteet"))
+    document.querySelector('#parhaatpisteet').innerHTML = parhaatpisteet
+    if (parhaatprosenttipisteet = null) {
+        parhaatprosenttipisteet = 0
+    } else {
+        document.querySelector('#parhaatpisteet').innerHTML = parhaatpisteet
+    }
     uusiKysymys()
     kysymysAjastin()
 })
