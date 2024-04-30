@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/indexstyle.css">
-    <title>MatikkaMajakka</title>
+    <title>Tulokset</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -21,9 +21,9 @@
         </label>
 
         <nav class="navbar">
-            <a href="#">Etusivu</a>
-            <a href="#">Tietoa meistä</a>
-            <a href="#">Pisteet</a>
+            <a href="./index.html">Etusivu</a>
+            <a href="./info.html">Tietoa meistä</a>
+            <a href="./tulokset.html">Pisteet</a>
             <a href="#">Pelit</a>
         </nav>
 
@@ -31,11 +31,48 @@
     </section>
     <div class="tekstilaatikko">
         <h1>Tuloksesi</h1>
-        <p>Tähän tulee tulokset.</p>
+        <p>Tässä näet jokaisesta pelistä saamasi parhaat pisteet.</p>
+        <div class="container">
+        <table>
+            <tr>
+                <th>Peli</th>
+                <th>Parhaat pisteet</th>
+              </tr>
+              <tr>
+                <td>Alex</td>
+                <td><output id="parhaatalex"></output></td>
+              </tr>
+              <tr>
+                <td>Henrik</td>
+                <td><output id="parhaathenrik"></output></td>
+              </tr>
+              <tr>
+                <td>Miika</td>
+                <td><output id="parhaatmiika"></output></td>
+              </tr>
+              <tr>
+                <td>Prosenttipeli</td>
+                <td><output id="parhaatnico"></output></td>
+              </tr>
+              <tr>
+                <td>Olli</td>
+                <td><output id="parhaatolli"></output></td>
+              </tr>
+              <tr>
+                <td>Riku</td>
+                <td><output id="parhaatriku"></output></td>
+              </tr>
+              <tr>
+                <td>Veeti</td>
+                <td><output id="parhaatveeti"></output></td>
+              </tr>
+            </table>
+        </div>
     </div>
 
     <section class="footer">
         
     </section>
+    <script src="../js/tulokset.js"></script>
 </body>
 </html>
