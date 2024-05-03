@@ -87,10 +87,6 @@ body{
     border-color: #f4c531;
     outline: none;
   }
-  /*Hide Number Arrows*/
-  .container input[type="number"] {
-    -moz-appearance: textfield;
-  }
   .container input[type="number"]::-webkit-outer-spin-button,
   .container input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
