@@ -1,0 +1,336 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Kanit;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(/images/sky-8254928_1920.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body {
+    background-color: #f4c531;
+  }
+  .container {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 31.25em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 5em 3em;
+    border-radius: 0.5em;
+  }
+  .container h3 {
+    font-size: 1.2em;
+    color: #23234c;
+    text-align: center;
+    font-weight: 500;
+    line-height: 1.8em;
+  }
+  .container #submit-btn {
+    font-size: 1.2em;
+    font-weight: 500;
+    display: block;
+    margin: 0 auto;
+    background-color: #f4c531;
+    border-radius: 0.3em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #23234c;
+    padding: 0.6em 2em;
+  }
+  #error-msg {
+    text-align: center;
+    margin-top: 1em;
+    background-color: #ffdde0;
+    color: #d62f2f;
+    padding: 0.2em 0;
+  }
+  .container #question {
+    background-color: #eeedf1;
+    font-size: 2em;
+    font-weight: 600;
+    color: #23234c;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.4em 0 1em 0;
+    padding: 1em 0;
+  }
+  .container input {
+    font-size: 1em;
+    font-weight: 600;
+    width: 2.35em;
+    color: #23234c;
+    text-align: center;
+    padding: 0 0.2em;
+    border: none;
+    background-color: transparent;
+    border-bottom: 0.12em solid #23234c;
+    margin: 0 0.25em;
+  }
+  .container input:focus {
+    border-color: #f4c531;
+    outline: none;
+  }
+  /*Hide Number Arrows*/
+  .container input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  .container input[type="number"]::-webkit-outer-spin-button,
+  .container input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .controls-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f4c531;
+    height: 100%;
+    width: 100%;
+    top: 0;
+  }
+  #start-btn {
+    font-size: 1.2em;
+    font-weight: 500;
+    background-color: #ffffff;
+    color: #23234c;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0.8em 1.8em;
+    border-radius: 0.3em;
+  }
+  #result {
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    color: #23234c;
+  }
+  #result span {
+    font-weight: 600;
+  }
+  .hide {
+    display: none;
+  }
+.tekstilaatikko {
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.tekstilaatikko h1 {
+    font-size: 100px;
+}
+
+.tekstilaatikko p {
+    margin: 10px 0 40px;
+    font-size: 30px;
+}
+
+.etusivu-nappi {
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        border: 1px solid white;
+        padding: 12px 34px;
+        font-size: 30px;
+        background: transparent;
+        position: relative;
+        cursor: pointer;
+}
+
+.etusivu-nappi:hover {
+    border: 1px solid rgb(22, 236, 175);
+    background: rgb(22, 236, 175);
+    transition: 1s;
+    color: black;
+} 
+
+.header {
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a {
+    font-size: 1.15rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    margin-left: 2.5rem;
+}
+
+.dropbtn {
+    padding: 1.3rem 10%;
+    background: rgba(0, 0, 0, .1);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+ 
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .1);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  
+  .dropdown-content a {
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+ 
+  .dropdown:hover .dropdown-content {display: block;}
+
+.footer {
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.icons {
+    position: absolute;
+    font-size: 2.8rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+    right: 5%;
+}
+
+.MatikkaMajakka {
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+#check {
+    display: none;
+}
+
+.navbar a:hover {
+    padding: 5px;
+    border: 1px solid rgb(22, 236, 175);
+    background: rgb(22, 236, 175);
+    transition: .5s;
+    color: black;
+}
+
+
+@media (max-width: 850px) {
+    .tekstilaatikko h1 {
+        font-size: 40px;
+    }
+    .tekstilaatikko p {
+        font-size: 20px;
+    }
+
+    .etusivu-nappi {
+        font-size: 20px;
+    }
+
+    .header {
+        padding: 1.3rem 5%;
+    }
+}
+
+@media (max-width: 770px) {
+
+    .icons {
+        display: block;
+    }
+
+    #check:checked~.icons #hampurilais-menu{
+        display: none;
+    }
+
+    #check:checked~.icons #sulje-nappi{
+        display: block;
+    }
+
+    .icons #sulje-nappi {
+        display: none;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(0, 0, 0, .5);
+        backdrop-filter: blur(10px);
+        transition: .3s ease;
+        overflow: hidden;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 1.2rem;
+        margin: 1.5rem 0;
+        text-align: center;
+    }
+
+    #check:checked~.navbar{
+        height: 15rem;
+    }
+}
+
+
+  
