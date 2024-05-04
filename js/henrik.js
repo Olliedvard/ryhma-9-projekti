@@ -1,71 +1,153 @@
 
-const questions = [
-    {
-      question: "Mikä on  ",
-      choices: ["x=2", "x=4", "x=7"],
-      correct: 0
-    },
-    {
-      question: "",
-      choices: ["", "", ""],
-      correct: 2
-    },
-    {
-      question: "",
-      choices: ["", "", ""],
-      correct: 1
-    },
-    {
-        question: "",
-        choices: ["", "", ""],
-        correct: 1
-    },
-    {
-        question: "",
-        choices: ["", "", ""],
-        correct: 1
-    },
-
-
-
-   
-  ];
+(function(){
+    function buildQuiz(){
+      // variable to store the HTML output
+      const output = [];
   
-  let currentQuestion = 0;
-  let correctAnswers = 0;
+      // for each question...
+      myQuestions.forEach(
+        (currentQuestion, questionNumber) => {
   
-  function showQuestion() {
-    const questionText = document.getElementById("question-text");
-    questionText.textContent = questions[currentQuestion].question;
+          // variable to store the list of possible answers
+          const answers = [];
   
-    const choices = document.querySelectorAll(".choice");
-    choices.forEach((choice, index) => {
-      choice.textContent = questions[currentQuestion].choices[index];
-    });
+          // and for each available answer...
+          for(letter in currentQuestion.answers){
   
-    const feedback = document.getElementById("feedback");
-    feedback.textContent = "";
-  }
+            // ...add an HTML radio button
+            answers.push(
+              `<label>
+                <input type="radio" name="question${questionNumber}" value="${letter}">
+                ${letter} :
+                ${currentQuestion.answers[letter]}
+              </label>`
+            );
+          }
   
-  function checkAnswer(selected) {
-    const feedback = document.getElementById("feedback");
-    if (selected === questions[currentQuestion].correct) {
-      feedback.textContent = "Oikein!";
-      correctAnswers++;
-    } else {
-      feedback.textContent = "Väärin!";
+          // add this question and its answers to the output
+          output.push(
+            `<div class="question"> ${currentQuestion.question} </div>
+            <div class="answers"> ${answers.join('')} </div>`
+          );
+        }
+      );
+  
+      // finally combine our output list into one string of HTML and put it on the page
+      quizContainer.innerHTML = output.join('');
     }
   
-    setTimeout(() => {
-      currentQuestion++;
+    function showResults(){
   
-      if (currentQuestion < questions.length) {
-        showQuestion();
-      } else {
-        const quizContainer = document.querySelector(".quiz-container");
-        quizContainer.innerHTML = `<p>Sait ${correctAnswers} / ${questions.length} kysymyksestä oikein.</p>`;
+      // gather answer containers from our quiz
+      const answerContainers = quizContainer.querySelectorAll('.answers');
+  
+      // keep track of user's answers
+      let numCorrect = 0;
+  
+      // for each question...
+      myQuestions.forEach( (currentQuestion, questionNumber) => {
+  
+        // find selected answer
+        const answerContainer = answerContainers[questionNumber];
+        const selector = `input[name=question${questionNumber}]:checked`;
+        const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+  
+        // if answer is correct
+        if(userAnswer === currentQuestion.correctAnswer){
+          // add to the number of correct answers
+          numCorrect++;
+  
+          // color the answers green
+          answerContainers[questionNumber].style.color = 'lightgreen';
+        }
+        // if answer is wrong or blank
+        else{
+          // color the answers red
+          answerContainers[questionNumber].style.color = 'red';
+        }
+      });
+  
+      // show number of correct answers out of total
+      resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+    }
+  
+    const quizContainer = document.getElementById('quiz');
+    const resultsContainer = document.getElementById('results');
+    const submitButton = document.getElementById('submit');
+    const myQuestions = [
+      {
+        question: "Kysymys 1",
+        answers: {
+          a: "?",
+          b: "?",
+          c: " Joo"
+        },
+        correctAnswer: "c"
+      },
+      {
+        question: "Kysymys 2",
+        answers: {
+          a: "?",
+          b: "?",
+          c: "?"
+        },
+        correctAnswer: "c"
+      },
+      {
+        question: "Kysymys 3",
+        answers: {
+          a: "?",
+          b: "?",
+          c: "?",
+          d: "?"
+        },
+        correctAnswer: "d"
+      },
+      {
+        question: "Kysymys 4",
+        answers: {
+          a: "?",
+          b: "?",
+          c: "?",
+          d: "?"
+        },
+        correctAnswer: "d"
+      },
+      {
+        question: "Kysymys 5",
+        answers: {
+          a: "?",
+          b: "?",
+          c: "?",
+          d: "?"
+        },
+        correctAnswer: "d"
+      },
+      {
+        question: "Kysymys 6",
+        answers: {
+          a: "?",
+          b: "?",
+          c: "?",
+          d: "?"
+        },
+        correctAnswer: "d"
+      },
+      {
+        question: "Kysymys 7",
+        answers: {
+          a: "?",
+          b: "?",
+          c: "?",
+          d: "?"
+        },
+        correctAnswer: "d"
       }
-    }, 2000);
-  }
+
+    ];
   
-  showQuestion();
+    buildQuiz();
+  
+    // Event listeners
+    submitButton.addEventListener('click', showResults);
+  })();

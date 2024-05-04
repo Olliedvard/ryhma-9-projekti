@@ -1,46 +1,110 @@
+
+.question{
+	font-weight: 600;
+}
+.answers {
+  margin-bottom: 20px;
+}
+.answers label{
+  display: block;
+}
+#submit{
+	font-family: sans-serif;
+	font-size: 20px;
+	background-color: #279;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+#submit:hover{
+	background-color: #38a;
+}
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
+    font-family: Kanit;
 }
-ul {
-    list-style-type: none;
 
-    background-color: #8a2c2c;
-    height: 100%;
+body{
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(/images/sky-8254928_1920.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
 }
 
-li {
-    display: inline-block;
-}
-
-li a {
-    font-family: Arial, Helvetica, sans-serif;
-    display: inline-block;
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5em 1em;
-}
-
-.leipateksti {
-    padding: 1em;
+.tekstilaatikko {
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
 }
 
-li a:hover {
-    background-color: #111;
-    font-weight: bold;
+.tekstilaatikko h1 {
+    font-size: 100px;
 }
 
-p {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font: #666;
+.tekstilaatikko p {
+    margin: 10px 0 40px;
+    font-size: 30px;
+}
+
+.etusivu-nappi {
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        border: 1px solid white;
+        padding: 12px 34px;
+        font-size: 30px;
+        background: transparent;
+        position: relative;
+        cursor: pointer;
+}
+
+.etusivu-nappi:hover {
+    border: 1px solid rgb(22, 236, 175);
+    background: rgb(22, 236, 175);
+    transition: 1s;
+    color: black;
+} 
+
+.header {
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a {
+    font-size: 1.15rem;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    margin-left: 2.5rem;
 }
 
 .dropbtn {
-    background-color: #8a2c2c;
+    padding: 1.3rem 10%;
+    background: rgba(0, 0, 0, .1);
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -57,7 +121,7 @@ p {
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: rgba(0, 0, 0, .1);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -65,7 +129,7 @@ p {
   
   
   .dropdown-content a {
-    color: black;
+    color: rgb(255, 255, 255);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -76,73 +140,106 @@ p {
   
  
   .dropdown:hover .dropdown-content {display: block;}
-  
-  
-form {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 10px;
-    margin: 10px;
-}
 
-.container {
-    width: 50%;
-    margin: auto;
-    padding: 10px;
-}
-
-h2 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-h4 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-button {
-    padding: 10px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.superscript{
-    vertical-align: super;
-}
-
-
-
-.quiz-container {
+.footer {
     box-sizing: border-box;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 2em;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  .choices {
+    padding: 3rem 10%;
     display: flex;
-  }
-  
-  .choice {
-    font-size: 1em;
-    display: block;
-    margin: 5px 5px;
-    padding: .5em .75em;
-    background-color: #3498db;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.icons {
+    position: absolute;
+    font-size: 2.8rem;
     color: white;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .choice:hover {
-    background-color: #2980b9;
-  }
-  body {
-    min-height: 100vh;
-    background: url('/images/sky-8254928_1920.jpg') no-repeat;
-    background-position: center;
-    background-size: cover;
+    display: none;
+    right: 5%;
+}
+
+.MatikkaMajakka {
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+#check {
+    display: none;
+}
+
+.navbar a:hover {
+    padding: 5px;
+    border: 1px solid rgb(22, 236, 175);
+    background: rgb(22, 236, 175);
+    transition: .5s;
+    color: black;
+}
+
+
+@media (max-width: 850px) {
+    .tekstilaatikko h1 {
+        font-size: 40px;
+    }
+    .tekstilaatikko p {
+        font-size: 20px;
+    }
+
+    .etusivu-nappi {
+        font-size: 20px;
+    }
+
+    .header {
+        padding: 1.3rem 5%;
+    }
+}
+
+@media (max-width: 770px) {
+
+    .icons {
+        display: block;
+    }
+
+    #check:checked~.icons #hampurilais-menu{
+        display: none;
+    }
+
+    #check:checked~.icons #sulje-nappi{
+        display: block;
+    }
+
+    .icons #sulje-nappi {
+        display: none;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(0, 0, 0, .5);
+        backdrop-filter: blur(10px);
+        transition: .3s ease;
+        overflow: hidden;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 1.2rem;
+        margin: 1.5rem 0;
+        text-align: center;
+    }
+
+    #check:checked~.navbar{
+        height: 15rem;
+    }
 }
