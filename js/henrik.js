@@ -69,73 +69,64 @@
     const submitButton = document.getElementById('submit');
     const myQuestions = [
       {
-        question: "Sievennä jos mahdollista",
+        question: "Sievennä jos mahdollista : 7x<sup>5</sup>+9x<sup>5</sup>",
         answers: {
-          a: "?",
-          b: "?",
-          c: " Joo"
+          a: "Ei voi sieventää",
+          b: "12x<sup>10</sup>",
+          c: "16x<sup>5</sup>"
         },
         correctAnswer: "c"
       },
       {
-        question: "Kysymys 2",
+        question: "Sievennä jos mahdollista : x<sup></sup>-8x<sup>6</sup>",
         answers: {
-          a: "?",
-          b: "?",
-          c: "?"
+          a: "Ei voi sieventää",
+          b: "-7x<sup>6</sup>",
+          c: "7x<sup>6</sup>"
+        },
+        correctAnswer: "b"
+      },
+      {
+        question: "Sievennä jos mahdollista :-3x<sup>2</sup>-x",
+        answers: {
+          a: "Ei voi sieventää.",
+          b: "-2x<sup>2</sup>",
+          c: "-4x<sup>2</sup>",
+          d: "-4x"
+        },
+        correctAnswer: "a"
+      },
+      {
+        question: "Sievennä jos mahdollista : 5x<sup>6</sup>*x",
+        answers: {
+          a: "5x<sup>7</sup>",
+          b: "6x<sup>6</sup>",
+          c: "6x<sup>7</sup>",
+          d: "Ei voi sieventää"
+        },
+        correctAnswer: "a"
+      },
+      {
+        question: "Laske polynomin arvo kun, x = -5:<br> x<sup>2</sup> + x + 3 + 2x<sup>2</sup> - x -4",
+        answers: {
+          a: "-77",
+          b: "Ei voi laskea",
+          c: "2x<sup>2</sup>",
+          d: "77"
+        },
+        correctAnswer: "d"
+      },
+      {
+        question: "Laske polynomin arvo kun, x = -3 : <br> 6x<sup>2</sup>-12x-(6x<sup>2</sup>-13x+155) ",
+        answers: {
+          a: "Ei voi laskea",
+          b: "-158",
+          c: "155",
+          d: "75"
         },
         correctAnswer: "c"
       },
-      {
-        question: "Kysymys 3",
-        answers: {
-          a: "?",
-          b: "?",
-          c: "?",
-          d: "?"
-        },
-        correctAnswer: "d"
-      },
-      {
-        question: "Kysymys 4",
-        answers: {
-          a: "?",
-          b: "?",
-          c: "?",
-          d: "?"
-        },
-        correctAnswer: "d"
-      },
-      {
-        question: "Kysymys 5",
-        answers: {
-          a: "?",
-          b: "?",
-          c: "?",
-          d: "?"
-        },
-        correctAnswer: "d"
-      },
-      {
-        question: "Kysymys 6",
-        answers: {
-          a: "?",
-          b: "?",
-          c: "?",
-          d: "?"
-        },
-        correctAnswer: "d"
-      },
-      {
-        question: "Kysymys 7",
-        answers: {
-          a: "?",
-          b: "?",
-          c: "?",
-          d: "?"
-        },
-        correctAnswer: "d"
-      }
+
 
     ];
   
