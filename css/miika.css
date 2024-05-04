@@ -9,7 +9,7 @@ body{
     min-height: 100vh;
     background-position: center;
     background-size: cover;
-    background-color: #f4c531;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(/images/sky-8254928_1920.jpg);
 }
 
 
@@ -117,6 +117,9 @@ body{
   .hide {
     display: none;
   }
+
+
+
 .tekstilaatikko {
     width: 90%;
     color: white;
