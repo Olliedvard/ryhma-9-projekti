@@ -90,7 +90,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: gray;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(/images/sky-8254928_1920.jpg);
     height: 100%;
     width: 100%;
     top: 0;
