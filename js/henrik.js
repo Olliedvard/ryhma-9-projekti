@@ -1,20 +1,15 @@
 
 (function(){
     function buildQuiz(){
-      // variable to store the HTML output
       const output = [];
   
-      // for each question...
       myQuestions.forEach(
         (currentQuestion, questionNumber) => {
   
-          // variable to store the list of possible answers
           const answers = [];
   
-          // and for each available answer...
           for(letter in currentQuestion.answers){
   
-            // ...add an HTML radio button
             answers.push(
               `<label>
                 <input type="radio" name="question${questionNumber}" value="${letter}">
@@ -24,130 +19,120 @@
             );
           }
   
-          // add this question and its answers to the output
           output.push(
             `<div class="question"> ${currentQuestion.question} </div>
             <div class="answers"> ${answers.join('')} </div>`
           );
         }
       );
+      alert('Alla on 6 monivalinta kysymystä. Kun olet vastannut jokaiseen kysymykseen paina "varmista" nappia jonka jälkeen näet kuinka monta kohtaa on oikein napin ala puolelta. Näet pisteet myös tulokset sivulta. Tsemppiä tehtäviin :)')
   
-      // finally combine our output list into one string of HTML and put it on the page
+
       quizContainer.innerHTML = output.join('');
     }
   
     function showResults(){
   
-      // gather answer containers from our quiz
       const answerContainers = quizContainer.querySelectorAll('.answers');
   
-      // keep track of user's answers
+      // Laskee oikeat vastaukset
       let numCorrect = 0;
   
-      // for each question...
+
       myQuestions.forEach( (currentQuestion, questionNumber) => {
   
-        // find selected answer
+
         const answerContainer = answerContainers[questionNumber];
         const selector = `input[name=question${questionNumber}]:checked`;
         const userAnswer = (answerContainer.querySelector(selector) || {}).value;
   
-        // if answer is correct
         if(userAnswer === currentQuestion.correctAnswer){
-          // add to the number of correct answers
+
           numCorrect++;
   
-          // color the answers green
-          answerContainers[questionNumber].style.color = 'lightgreen';
+          // Oikein vastauksen väri
+          answerContainers[questionNumber].style.color = 'green';
         }
-        // if answer is wrong or blank
+        // Jos vastaus on väärin
         else{
-          // color the answers red
+          // väärän vastauksen väri
           answerContainers[questionNumber].style.color = 'red';
         }
       });
   
-      // show number of correct answers out of total
-      resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+      
+      // Näyttää kuinka moni vastaus meni oikein
+      resultsContainer.innerHTML = `${numCorrect} / ${myQuestions.length}`;
     }
-  
+      // Kysymykset
     const quizContainer = document.getElementById('quiz');
     const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
     const myQuestions = [
       {
-        question: "Kysymys 1",
+        question: "Sievennä jos mahdollista : 7x<sup>5</sup>+9x<sup>5</sup>",
         answers: {
-          a: "?",
-          b: "?",
-          c: " Joo"
+          a: "Ei voi sieventää",
+          b: "12x<sup>10</sup>",
+          c: "16x<sup>5</sup>"
         },
         correctAnswer: "c"
       },
       {
-        question: "Kysymys 2",
+        question: "Sievennä jos mahdollista : x<sup></sup>-8x<sup>6</sup>",
         answers: {
-          a: "?",
-          b: "?",
-          c: "?"
+          a: "Ei voi sieventää",
+          b: "-7x<sup>6</sup>",
+          c: "7x<sup>6</sup>"
+        },
+        correctAnswer: "b"
+      },
+      {
+        question: "Sievennä jos mahdollista :-3x<sup>2</sup>-x",
+        answers: {
+          a: "Ei voi sieventää.",
+          b: "-2x<sup>2</sup>",
+          c: "-4x<sup>2</sup>",
+          d: "-4x"
+        },
+        correctAnswer: "a"
+      },
+      {
+        question: "Sievennä jos mahdollista : 5x<sup>6</sup>*x",
+        answers: {
+          a: "5x<sup>7</sup>",
+          b: "6x<sup>6</sup>",
+          c: "6x<sup>7</sup>",
+          d: "Ei voi sieventää"
+        },
+        correctAnswer: "a"
+      },
+      {
+        question: "Laske polynomin arvo kun, x = -5:<br> x<sup>2</sup> + x + 3 + 2x<sup>2</sup> - x -4",
+        answers: {
+          a: "-77",
+          b: "Ei voi laskea",
+          c: "2x<sup>2</sup>",
+          d: "77"
+        },
+        correctAnswer: "d"
+      },
+      {
+        question: "Laske polynomin arvo kun, x = -3 : <br> 6x<sup>2</sup>-12x-(6x<sup>2</sup>-13x+155) ",
+        answers: {
+          a: "Ei voi laskea",
+          b: "-158",
+          c: "155",
+          d: "75"
         },
         correctAnswer: "c"
       },
-      {
-        question: "Kysymys 3",
-        answers: {
-          a: "?",
-          b: "?",
-          c: "?",
-          d: "?"
-        },
-        correctAnswer: "d"
-      },
-      {
-        question: "Kysymys 4",
-        answers: {
-          a: "?",
-          b: "?",
-          c: "?",
-          d: "?"
-        },
-        correctAnswer: "d"
-      },
-      {
-        question: "Kysymys 5",
-        answers: {
-          a: "?",
-          b: "?",
-          c: "?",
-          d: "?"
-        },
-        correctAnswer: "d"
-      },
-      {
-        question: "Kysymys 6",
-        answers: {
-          a: "?",
-          b: "?",
-          c: "?",
-          d: "?"
-        },
-        correctAnswer: "d"
-      },
-      {
-        question: "Kysymys 7",
-        answers: {
-          a: "?",
-          b: "?",
-          c: "?",
-          d: "?"
-        },
-        correctAnswer: "d"
-      }
+
 
     ];
   
     buildQuiz();
   
-    // Event listeners
+    // Näyttää oikeat ja väärät vastaukset.
     submitButton.addEventListener('click', showResults);
   })();

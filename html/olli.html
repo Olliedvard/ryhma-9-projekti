@@ -5,21 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/olli.css" rel="stylesheet">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+    <section class="header">
+        <a href="./index.html" class="MatikkaMajakka">MatikkaMajakka</a>
+ 
+        <input type="checkbox" id="check">
+         <label for="check" class="icons">
+             <i class='bx bx-menu' id="hampurilais-menu"></i>
+             <i class='bx bx-x' id="sulje-nappi"></i>
+         </label>
+ 
+        <nav class="navbar">
+             <a href="./index.html">Etusivu</a>
+             <a href="./info.html">Tietoa meistä</a>
+             <a href="./tulokset.html">Pisteet</a>
+             <div class="dropdown">
+                 <button class="dropbtn">Tasot</button>
+                 <div class="dropdown-content">
+                   <a href="./alex.html">Alexin sivu</a>
+                   <a href="./henrik.html">Polynomit</a>
+                   <a href="./miika.html">Miikan sivu</a>
+                   <a href="./nico.html">Prosentit</a>
+                   <a href="./olli.html">Potenssi</a>
+                   <a href="./riku.html">Neliöjuuret</a>
+                   <a href="./veeti.html">Kertolaskut</a>
+                 </div>
+               </div>
+        </nav>
+    </section>
     <div id="container">
-        <h3>Kymmenen kertolaskut</h3>
+        
         <form>
             <div>
-               <output id="num1"> </output> *
-               <output id="num2"> </output> =
-               <input type="number">
+               <output id="num1"> </output> <span class="superscript"><output id="num2"> </output></span>
+               <br><br>
+               <input type="number" id="inputti">
+               
             </div>
             <div>
-                <button type="button" id="calculate">Vastaus</button>
+                <br>
+                <button type="button" id="vastaus">kokkeileppa</button>
             </div>
-           
-        </form>
+            
+        </form>   
+        
     </div>   
     <script src="../js/olli.js"></script>
 </body>
