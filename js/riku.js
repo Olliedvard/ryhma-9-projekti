@@ -1,7 +1,6 @@
 let rand_num1 = 0
 let pisteet = 0
 let kysymysnro = 0
-let satunnainen = 0
 const nappi = document.getElementById('laske')
 const virhev = document.getElementById('virheviesti')
 
@@ -16,19 +15,33 @@ const randomizeNumbers = () =>{
     document.querySelector('#num1').innerHTML = rand_num1
 }
 
-const peliOhi = () => {
-    alert("Onneksi olkoon!. Sait "+[pisteet]+"pistettä.")
+const pysäytä = () => {
+    alert("Onneksi olkoon!. Sait "+[pisteet]+ "pistettä.")
     nappi.remove()
-    clearInterval(ajastinON);
     if (pisteet > paras) {
         paras = pisteet
-        sessionStorage.setItem("parhaatprosenttipisteet", paras.toString())
+        sessionStorage.setItem("parhaatneliöjuuripisteet", paras.toString())
         document.querySelector('#ennätys').innerHTML = paras
+    }
+}
+
+const seuraavaKysymys = () => {
+    kysymysnro = kysymysnro+1
+    if (kysymysnro < 5) {
+        randomizeNumbers();
+
+    } else {
+        pysäytä()
     }
 }
 
 addEventListener("DOMContentLoaded", () =>{
     randomizeNumbers()
+    if (paras = null) {
+        paras = 0
+    } else {
+        document.querySelector('#ennätys').innerHTML = paras
+    }
 });
 
     //User Input Check
@@ -40,6 +53,7 @@ addEventListener("DOMContentLoaded", () =>{
         if (userInput) {
           if (userInput == answerValue) { //Käyttäjä vastaa oikein
             alert('Oikein!');
+            pisteet = pisteet + 10
           }
           else { //Käyttäjä vastaa väärin
             alert('Väärin!');
@@ -49,6 +63,7 @@ addEventListener("DOMContentLoaded", () =>{
           virhev.classList.remove("hide");
           virhev.innerHTML = "Laita vastaus vastauskenttään!";
         }
+        seuraavaKysymys();
       });
 
     randomizeNumbers()

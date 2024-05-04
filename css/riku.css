@@ -1,9 +1,39 @@
 div#container{
     display: flex;
-    height: 50vh;
+    height: 90vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+form{
+    border: 10px gray;
+    padding: 20px;
+    background-color: gray;
+    font-size: 25px;
+}
+
+h2,h3{
+    font-size: 25px;
+    font-weight: normal
+}
+
+button{
+    margin-left: 80px;
+    margin-top: 10px;
+    font-size: 20px;
+    background-color: black;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+    color: gray;
+}
+
+h1{
+    font-size: 60px;
 }
 
 *{
@@ -124,21 +154,6 @@ body{
   
  
   .dropdown:hover .dropdown-content {display: block;}
-
-.footer {
-    box-sizing: border-box;
-    background: rgba(0, 0, 0, .1);
-    backdrop-filter: blur(10px);
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 3rem 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
 
 .icons {
     position: absolute;
