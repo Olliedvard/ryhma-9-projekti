@@ -24,10 +24,10 @@ addEventListener("DOMContentLoaded", () => {
 })
 
 document.querySelector('#vastaus').addEventListener('click',() => {
-    const answer = Number(document.querySelector('input').value)
-    const correctAnswer = rand_num**num2
-    console.log(correctAnswer)
-    if (answer === correctAnswer) {
+    const vastaus = Number(document.querySelector('input').value)
+    const oikeavastaus = rand_num**num2
+    console.log(oikeavastaus)
+    if (vastaus === oikeavastaus) {
         alert('Oikein!')
         oikein++
     } else {
@@ -35,7 +35,6 @@ document.querySelector('#vastaus').addEventListener('click',() => {
         vaarin++
     }
 
-    
 
 console.log(input.value)
 input.value=""
