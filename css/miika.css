@@ -12,7 +12,6 @@ body{
     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(/images/sky-8254928_1920.jpg);
 }
 
-
   .container {
     background-color: #ffffff;
     width: 90%;
@@ -113,6 +112,13 @@ body{
   }
   #result span {
     font-weight: 600;
+  font-size: 1.2em;
+  background-color: #ffffff;
+  color: #23234c;
+  border: none;
+  outline: none;
+  padding: 0.8em 1.8em;
+  border-radius: 0.3em;
   }
   .hide {
     display: none;

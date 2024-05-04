@@ -50,7 +50,7 @@ const questionGenerator = () => {
         errorMessage.innerHTML = "Laita jokin seuraavista operaattoreista: +, - tai *";
       }
       else {
-        stopGame(`<span>Väärä</span> Vastaus`);
+        stopGame(`<span>Väärä vastaus</span>`);
       }
     }
     else {
