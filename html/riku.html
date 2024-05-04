@@ -44,15 +44,18 @@
          
      </section>
     <div id="container">
-        <h1>Neliöjuurtaja</h1>
+        <h1>Neliöjuuripeli</h1>
         <form>
             <div>
                 <span>&Sqrt;</span><output id="num1"></output> =
-                <input type="number" />
+                <input type="number" id="vastaus"/>
             </div>
             <div>
-                <button type="button" id="calculate">Vastaa</button>
+                <button type="button" id="laske">Vastaa</button>
+                <p id="virheviesti"></p>
             </div>
+            <div id="pistediv">
+                <h4>Ennätys: <output id="ennätys"></output></h4>
         </form>
     </div>
     <script src="../js/riku.js" />
