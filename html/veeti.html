@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/veeti.css" rel="stylesheet">
-    <title>Geometria</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="/css/veeti.css">
+
+    <title>Kertolaskut</title>
 </head>
+
 <body>
     <section class="header">
-        <a href="/html/index.html" class="MatikkaMajakka">MatikkaMajakka</a>
+        <a href="#" class="MatikkaMajakka">MatikkaMajakka</a>
  
         <input type="checkbox" id="check">
          <label for="check" class="icons">
@@ -21,15 +24,46 @@
          </label>
  
          <nav class="navbar">
-             <a href="/html/index.html">Etusivu</a>
-             <a href="/html/info.html">Tietoa meistä</a>
-             <a href="/html/tulokset.html">Pisteet</a>
-             <a href="#">Pelit</a>
+             <a href="#">Etusivu</a>
+             <a href="#">Tietoa meistä</a>
+             <a href="#">Pisteet</a>
+             <a href="#">Tasot</a>
          </nav>
  
- 
-     </section>
-
-    <script src="../js/veeti.js"></script>
+  </section>
+     <h1 class="Kertolaskut">Kertolaskut</h1>
+     <div class="tekstilaatikko">
+        
+        <div class="tehtavalaatikko">
+            <div id="aikaboxi">
+                Aikaa jäljellä: <span id="aika">60</span>
+            </div>
+            <div id="pisteetlaatikko">
+                Pisteet: <span id="pisteet">0</span>
+            </div>
+            <div id="oikein">
+                Oikein!
+            </div>
+            <div id="vaaravastaus">
+                Yritä uudelleen
+            </div>
+            <div id="kysymys"></div>
+            <div class="peliohje">
+                Valitse oikea vastaus
+            </div>
+            <div id="vaihtoehdot">
+                <div class="box" id="box1"></div>
+                <div class="box" id="box2"></div>
+                <div class="box" id="box3"></div>
+                <div class="box" id="box4"></div>
+            </div>
+            <div id="aloitanappi">
+                Aloita peli
+            </div>
+            <div id="peliloppu"></div>
+        </div>
+        <div class="tekstilaatikko">
+    </div>
+    <script src="/js/veeti.js"></script>
 </body>
 </html>
