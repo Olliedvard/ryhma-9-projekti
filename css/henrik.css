@@ -33,7 +33,12 @@ body{
     background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(/images/sky-8254928_1920.jpg);
     background-position: center;
     background-size: cover;
+    color: white;
+    text-align:center;
+    position: relative;
+    margin-top: 125px;
 }
+
 
 .container {
     display: flex;
