@@ -25,6 +25,7 @@
           );
         }
       );
+      alert('Alla on 6 monivalinta kysymystä. Kun olet vastannut jokaiseen kysymykseen paina "varmista" nappia jonka jälkeen näet kuinka monta kohtaa on oikein napin ala puolelta. Näet pisteet myös tulokset sivulta. Tsemppiä tehtäviin :)')
   
 
       quizContainer.innerHTML = output.join('');
