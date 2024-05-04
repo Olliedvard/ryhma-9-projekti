@@ -1,4 +1,7 @@
 
+.superscript{
+    vertical-align: super;
+}
 .question{
 	font-weight: 600;
 }
