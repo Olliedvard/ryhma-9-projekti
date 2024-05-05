@@ -25,7 +25,7 @@ document.getElementById("aloitanappi").onclick = function () {
 
         document.getElementById("pisteet").innerHTML = pisteet;
         show("aikaboxi");
-        aika = 60;
+        aika = 30;
 
         document.getElementById("aika").innerHTML = aika;
         hide("peliloppu");
@@ -58,6 +58,34 @@ for (i = 1; i < 5; i++) {
                     hide("vaaravastaus");
                 }, 1000);
             }
+        }
+    }
+}
+
+function muodostaKysymys() {
+    let x = 1 + Math.round(9 * Math.random());
+    let y = 1 + Math.round(9 * Math.random());
+    oikeaVastaus = x * y;
+
+    document.getElementById("kysymys").innerHTML = x + "x" + y;
+    let correctPosition = 1 + Math.round(3 * Math.random());
+
+    document.getElementById("box" + correctPosition).innerHTML = oikeaVastaus;
+
+    let vastaukset = [oikeaVastaus];
+
+    for (i = 1; i < 5; i++) {
+        if (i != correctPosition) {
+            let wrongAnswer;
+            do {
+                wrongAnswer = (1 +
+                    Math.round(9 * Math.random())) * (1 +
+                        Math.round(9 * Math.random()));
+
+            } while (vastaukset.indexOf(wrongAnswer) > -1)
+
+            document.getElementById("box" + i).innerHTML = wrongAnswer;
+            vastaukset.push(wrongAnswer);
         }
     }
 }
@@ -106,30 +134,3 @@ function show(Id) {
     document.getElementById(Id).style.display = "block";
 }
 
-function muodostaKysymys() {
-    let x = 1 + Math.round(9 * Math.random());
-    let y = 1 + Math.round(9 * Math.random());
-    oikeaVastaus = x * y;
-
-    document.getElementById("kysymys").innerHTML = x + "x" + y;
-    let correctPosition = 1 + Math.round(3 * Math.random());
-
-    document.getElementById("box" + correctPosition).innerHTML = oikeaVastaus;
-
-    let vastaukset = [oikeaVastaus];
-
-    for (i = 1; i < 5; i++) {
-        if (i != correctPosition) {
-            let wrongAnswer;
-            do {
-                wrongAnswer = (1 +
-                    Math.round(9 * Math.random())) * (1 +
-                        Math.round(9 * Math.random()));
-
-            } while (vastaukset.indexOf(wrongAnswer) > -1)
-
-            document.getElementById("box" + i).innerHTML = wrongAnswer;
-            vastaukset.push(wrongAnswer);
-        }
-    }
-}

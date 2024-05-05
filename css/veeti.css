@@ -110,17 +110,8 @@
     display: none;
   }
   
-  #vaaravastaus {
-    position: absolute;
-    left: 250px;
-    background-color: red;
-    color: white;
-    padding: 5px 12px;
-    display: none;
-  }
-  
   #kysymys {
-    width: 450px;
+    width: 250px;
     height: 150px;
     margin: 50px auto 10px auto;
     background-color: white;
@@ -132,14 +123,23 @@
   }
   
   .peliohje {
+    text-align: center;
     width: 450px;
     height: 50px;
     margin: 10px auto;
-    text-align: center;
     line-height: 45px;
     color: white;
   }
   
+  #vaaravastaus {
+    padding: 5px 12px;
+    position: absolute;
+    left: 250px;
+    background-color: red;
+    color: white;
+    display: none;
+  }
+
   #vaihtoehdot {
     width: 450px;
     height: 100px;
@@ -190,7 +190,7 @@
     height: 150px;
     width: 500px;
     background: rgb(255, 6, 6);
-    font-size: 2.5em;
+    font-size: 3em;
     text-align: center;
     position: absolute;
     top: 70px;
