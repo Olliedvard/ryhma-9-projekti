@@ -1,5 +1,5 @@
 Github-nimimerkit:
-Nico Pasma: nicopasma,
+Nico Lust: nicopasma,
 Olli Nuorala: Olliedvard,
 Veeti Tiilikainen: VeetiT,
 Miika Ojala: ojalamiika,
@@ -11,7 +11,7 @@ Hacknplan linkki:
 https://app.hacknplan.com/p/202458/kanban?categoryId=0&boardId=557448
 
 Hacknplan-nimimerkit:
-Nico Pasma: nicopasma,
+Nico Lust: nicopasma,
 Olli Nuorala: Olliedvard,
 Veeti Tiilikainen: VeetiTiili,
 Miika Ojala: ojalamiika,
@@ -20,7 +20,7 @@ Alex Granat: AlexGranatt,
 Riku Jääskeläinen: Rjaask
 
 Discord-nimimerkit:
-Nico Pasma: kahvikoukku,
+Nico Lust: kahvikoukku,
 Olli Nuorala: rauno,
 Veeti Tiilikainen: Vede,
 Miika Ojala: Jäine,
