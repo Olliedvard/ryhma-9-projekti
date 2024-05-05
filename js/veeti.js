@@ -72,7 +72,7 @@ function startCountdown() {
             stopCountdown();
             show("peliloppu");
           
-            document.getElementById("peliloppu").innerHTML = "<p>Aika loppui!</p><p>Sait " + pisteet + " pistettä</p>";
+            document.getElementById("peliloppu").innerHTML = "<p>Aika loppui!</p><p>Sait " + pisteet + " pistettä!</p>";
             hide("aikaboxi");
             hide("oikein");
             hide("vaaravastaus");
