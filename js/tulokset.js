@@ -3,5 +3,8 @@ addEventListener("DOMContentLoaded", () => {
     document.querySelector('#parhaatnico').innerHTML = parhaatnico //Näytetään "parhaatprosenttipisteet" prosenttipelin "parhaat pisteet" -sarakkeella.
     parhaatriku = Number(sessionStorage.getItem("parhaatneliöjuuripisteet"))
     document.querySelector('#parhaatriku').innerHTML = parhaatriku
-
+    parhaathenrik = Number(sessionStorage.getItem("numCorrect"))
+    document.querySelector('#parhaathenrik').innerHTML = parhaathenrik
+    parhaatveeti = Number(sessionStorage.getItem("parhaatkertolaskupisteet"))
+    document.querySelector('#parhaatveeti').innerHTML = parhaatveeti
 })

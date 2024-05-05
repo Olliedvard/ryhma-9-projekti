@@ -15,6 +15,37 @@ body{
     
 }
 
+.laatikko {
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(20px);
+    width: 40%;
+    max-width: 400px;
+    height: 30%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-top: 3px solid;
+    border-left: 3px solid;
+    border-right: 3px solid;
+    border-bottom: 3px solid;
+    border-radius: 1.5%;
+}
+
+#vastaus {
+    width: 150px;
+    padding: 10px;
+    color:black;
+    background-color: rgb(22, 236, 175);
+    margin: 0 auto;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    font-size: large;
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;

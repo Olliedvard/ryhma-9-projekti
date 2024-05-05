@@ -20,23 +20,26 @@ const randomizeNumbers = () => {
 }
 
 addEventListener("DOMContentLoaded", () => {
+    alert('Potenssipeli. Saat oikeasta vastauksesta yhden pisteen. Aloita peli painamalla ok.')
     randomizeNumbers()
 })
 
 document.querySelector('#vastaus').addEventListener('click',() => {
-    const vastaus = Number(document.querySelector('input').value)
+    const vastaus = Number(document.querySelector('#inputti').value)
     const oikeavastaus = rand_num**num2
     console.log(oikeavastaus)
+    console.log(vastaus)
     if (vastaus === oikeavastaus) {
-        alert('Oikein!')
+        
         oikein++
     } else {
         alert('Väärin!')
         vaarin++
     }
 
-
+    document.querySelector('#oikein').innerHTML = oikein
 console.log(input.value)
 input.value=""
 randomizeNumbers()
 })
+
