@@ -5,10 +5,10 @@ let action;
 let peli = false;
 
 addEventListener("DOMContentLoaded", () => {
-    parhaatpisteet = Number(sessionStorage.getItem("parhaatprosenttipisteet"))
+    parhaatpisteet = Number(sessionStorage.getItem("parhaatkertolaskupisteet"))
     document.querySelector('#parhaatpisteet').innerHTML = parhaatpisteet
-    if (parhaatprosenttipisteet = null) {
-        parhaatprosenttipisteet = 0
+    if (parhaatkertolaskupisteet = null) {
+        parhaatkertolaskupisteet = 0
     } else {
         document.querySelector('#parhaatpisteet').innerHTML = parhaatpisteet
     }
