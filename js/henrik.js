@@ -100,7 +100,7 @@
       {
         question: "Sievennä jos mahdollista : 5x<sup>6</sup>*x",
         answers: {
-          a: "5x<sup>6</sup>",
+          a: "5x<sup>7</sup>",
           b: "6x<sup>6</sup>",
           c: "6x<sup>7</sup>",
           d: "Ei voi sieventää"
@@ -132,11 +132,29 @@
     buildQuiz();
   
     // Näyttää oikeat ja väärät vastaukset.
-    submitButton.addEventListener('click', showResults);
-  })();
+    submitButton.addEventListener('click', showResults)
+
+
+
+const peliOhi = () => {
+        submitButton.remove();
+        if (numCorrect > parhaatpisteet) {
+            parhaatpisteet = numCorrect;
+            sessionStorage.setItem("parhaatpolynomipisteet", parhaatpisteet.toString());
+            document.querySelector('#parhaatpisteet').innerHTML = parhaatpisteet;
+        }
+    };
+
+    submitButton.addEventListener('click', peliOhi);
+})();
   addEventListener("DOMContentLoaded", () => {
-    alert('Alla on 6 monivalinta kysymystä. Kun olet vastannut jokaiseen kysymykseen paina "varmista" nappia jonka jälkeen näet kuinka monta kohtaa on oikein napin ala puolelta. Näet pisteet myös tulokset sivulta. Tsemppiä tehtäviin :)')
-    
-    parhaathenrik = Number(sessionStorage.setItem("numCorrect"))
-    document.querySelector('#parhaathenrik').innerHTML = parhaathenrik
-  })
+    alert('Alla on 6 monivalinta kysymystä. Kun olet vastannut jokaiseen kysymykseen, paina "Tarkista" nappia, jonka jälkeen näet kuinka monta kohtaa on oikein, napin ala puolelta. Näet pisteet myös tulokset sivulta. Tsemppiä tehtäviin :)')
+    parhaatpisteet = Number(sessionStorage.getItem("parhaatpolynomipisteet"))
+    document.querySelector('#parhaatpisteet').innerHTML = parhaatpisteet
+    if (polynomipisteet = null) {
+        polynomipisteet = 0
+    } else {
+        document.querySelector('#parhaatpisteet').innerHTML = parhaatpisteet
+    }
+})
+
