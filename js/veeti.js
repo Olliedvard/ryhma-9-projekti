@@ -98,8 +98,8 @@ function startCountdown() {  //Muodostetaan funktio ajastimelle eli ajastimesta 
         aika -= 1;
 
 
-        document.getElementById("aika").innerHTML = aika;
-        if (aika == 0) {
+        document.getElementById("aika").innerHTML = aika; 
+        if (aika == 0) { //Kun aika menee 0, peli päättyy ja sinulle näytetään pisteet. Jos ne oli parhaat pisteesi, pisteet tallennetaan sessionStorageen
             stopCountdown();
             show("peliloppu");
           
