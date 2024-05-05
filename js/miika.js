@@ -43,7 +43,7 @@ const questionGenerator = () => {
     let userInput = document.getElementById("inputValue").value;
     if (userInput) {
       if (userInput == answerValue) {
-        stopGame(`<span>Oikea</span> Vastaus!`);
+        stopGame(`<span>Oikea Vastaus!</span>`);
       }
       else if (operatorQuestion && !operators.includes(userInput)) {
         errorMessage.classList.remove("hide");

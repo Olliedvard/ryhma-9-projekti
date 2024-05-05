@@ -129,7 +129,7 @@ function kysymysAjastin() {
 }
 
 addEventListener("DOMContentLoaded", () => {
-    alert('Jokaisessa kysymyksessä sinulta kysytään prosenttimäärää. Säädä prosenttimäärää 0-200 välillä painamalla plus- ja miinusnappeja pohjassa. Pyöristä prosentti oikeaa vastausta lähimpään kokonaislukuun. Kun olet säätänyt prosenttimäärän mielestäsi oikeaksi vastaukseksi, paina "Vastaa." Aikaa on 60 sekuntia kysymystä kohden. Mitä nopeampi olet, sitä enemmän saat pisteitä. Jos vastauksesi on melkein oikein, saat säälipisteitä. Tekijä: Nico Lust')
+    alert('Jokaisessa kysymyksessä sinulta kysytään prosenttimäärää. Säädä prosenttimäärää 0-200 välillä painamalla plus- ja miinusnappeja pohjassa. Pyöristä prosentti oikeaa vastausta lähimpään kokonaislukuun. Kun olet säätänyt prosenttimäärän mielestäsi oikeaksi vastaukseksi, paina "Vastaa." Aikaa on 60 sekuntia kysymystä kohden. Mitä nopeampi olet, sitä enemmän saat pisteitä. Jos vastauksesi on melkein oikein, saat säälipisteitä.')
     document.querySelector('#prosentitmaara').innerHTML = prosentitmaara
     document.querySelector('#pisteet').innerHTML = pisteet
     document.querySelector('#kysymysnro').innerHTML = kysymysnro

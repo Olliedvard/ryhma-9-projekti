@@ -7,9 +7,9 @@ div#container{
 }
 
 form{
-    border: 10px gray;
     padding: 20px;
-    background-color: gray;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(20px);
     font-size: 25px;
 }
 
