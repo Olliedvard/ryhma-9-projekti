@@ -5,4 +5,6 @@ addEventListener("DOMContentLoaded", () => {
     document.querySelector('#parhaatriku').innerHTML = parhaatriku
     parhaathenrik = Number(sessionStorage.getItem("numCorrect"))
     document.querySelector('#parhaathenrik').innerHTML = parhaathenrik
+    parhaatveeti = Number(sessionStorage.getItem("parhaatkertolaskupisteet"))
+    document.querySelector('#parhaatveeti').innerHTML = parhaatveeti
 })

@@ -4,6 +4,17 @@ let oikeaVastaus;
 let action;
 let peli = false;
 
+addEventListener("DOMContentLoaded", () => {
+    parhaatpisteet = Number(sessionStorage.getItem("parhaatprosenttipisteet"))
+    document.querySelector('#parhaatpisteet').innerHTML = parhaatpisteet
+    if (parhaatprosenttipisteet = null) {
+        parhaatprosenttipisteet = 0
+    } else {
+        document.querySelector('#parhaatpisteet').innerHTML = parhaatpisteet
+    }
+})
+
+
 document.getElementById("aloitanappi").onclick = function () {
     if (peli == true) {
         location.reload();
@@ -67,10 +78,20 @@ function startCountdown() {
             hide("vaaravastaus");
             peli = false;
 
+            if (pisteet > parhaatpisteet) {
+                parhaatpisteet = pisteet
+                sessionStorage.setItem("parhaatkertolaskupisteet", parhaatpisteet.toString())
+                document.querySelector('#parhaatpisteet').innerHTML = parhaatpisteet
+            }
+
             document.getElementById("aloitanappi").innerHTML = "Aloita peli";
         }
     }, 1000);
 }
+
+console.log(pisteet)
+console.log(parhaatpisteet)
+
 
 function stopCountdown() {
     clearInterval(action);
