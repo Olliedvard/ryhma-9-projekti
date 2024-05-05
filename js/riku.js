@@ -4,7 +4,7 @@ let kysymysnro = 0
 const nappi = document.getElementById('laske')
 const virhev = document.getElementById('virheviesti')
 
-//Satunnaisen numeron luonti koodi
+//Tekee constin, joka on numero min ja maxin välillä, jotka voi määrittää
 const randomNumberInRange = (min,max) =>{
     return Math.floor(Math.random() * max) + min;
 }
