@@ -32,10 +32,10 @@
       font-size: 3rem;
   }
   
-  .header {
+  .header {   /* Navbarissa sekä headerissa on hyödynnetty YouTube tutoriaalia https://www.youtube.com/watch?v=yE9DLIoDwCg */
       box-sizing: border-box;
       background: rgba(0, 0, 0, .1);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px); 
       position: fixed;
       top: 0;
       left: 0;
@@ -63,7 +63,7 @@
   }
   
   
-  .icons {
+  .icons {  /* Myös burgeri valikko on saatu samasta videosta ja responsiivisuss eli milloin navbar vaihtuu tähän burgeri valikkoon. https://www.youtube.com/watch?v=yE9DLIoDwCg*/
       position: absolute;
       font-size: 2.8rem;
       color: white;
