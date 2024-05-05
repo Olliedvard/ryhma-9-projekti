@@ -25,7 +25,7 @@
           );
         }
       );
-      alert('Alla on 6 monivalinta kysymystä. Kun olet vastannut jokaiseen kysymykseen paina "varmista" nappia jonka jälkeen näet kuinka monta kohtaa on oikein napin ala puolelta. Näet pisteet myös tulokset sivulta. Tsemppiä tehtäviin :)')
+      
   
 
       quizContainer.innerHTML = output.join('');
@@ -100,7 +100,7 @@
       {
         question: "Sievennä jos mahdollista : 5x<sup>6</sup>*x",
         answers: {
-          a: "5x<sup>7</sup>",
+          a: "5x<sup>6</sup>",
           b: "6x<sup>6</sup>",
           c: "6x<sup>7</sup>",
           d: "Ei voi sieventää"
@@ -111,21 +111,19 @@
         question: "Laske polynomin arvo kun, x = -5:<br> x<sup>2</sup> + x + 3 + 2x<sup>2</sup> - x -4",
         answers: {
           a: "-77",
-          b: "Ei voi laskea",
+          b: "77",
           c: "2x<sup>2</sup>",
-          d: "77"
         },
-        correctAnswer: "d"
+        correctAnswer: "b"
       },
       {
         question: "Laske polynomin arvo kun, x = -3 : <br> 6x<sup>2</sup>-12x-(6x<sup>2</sup>-13x+155) ",
         answers: {
-          a: "Ei voi laskea",
+          a: "75",
           b: "-158",
           c: "155",
-          d: "75"
         },
-        correctAnswer: "c"
+        correctAnswer: "b"
       },
 
 
@@ -136,3 +134,9 @@
     // Näyttää oikeat ja väärät vastaukset.
     submitButton.addEventListener('click', showResults);
   })();
+  addEventListener("DOMContentLoaded", () => {
+    alert('Alla on 6 monivalinta kysymystä. Kun olet vastannut jokaiseen kysymykseen paina "varmista" nappia jonka jälkeen näet kuinka monta kohtaa on oikein napin ala puolelta. Näet pisteet myös tulokset sivulta. Tsemppiä tehtäviin :)')
+    
+    parhaathenrik = Number(sessionStorage.setItem("numCorrect"))
+    document.querySelector('#parhaathenrik').innerHTML = parhaathenrik
+  })
