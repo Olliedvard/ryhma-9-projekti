@@ -27,3 +27,6 @@ Miika Ojala: Jäine,
 Henrik Göös: Heka,
 Alex Granat: allug03,
 Riku Jääskeläinen: Gooby
+
+Linkki sivustolle:
+https://www.students.oamk.fi/~n3pani00/ryhma-9-projekti/html/info.html
